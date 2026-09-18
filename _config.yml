@@ -23,7 +23,7 @@ repository               : "laurn156/laurn156.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "IMG_7317.jpg"
+  avatar           : "/assets/images/IMG_7317.jpg"
   name             : "Lauren Nunez"
   pronouns         : "She/Her"  
   bio              : "Mechatronics Engineering | Robotics & AI"
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : https://www.linkedin.com/in/lauren--nunez/
+  linkedin         : lauren--nunez
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
