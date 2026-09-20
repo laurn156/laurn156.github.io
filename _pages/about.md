@@ -1,6 +1,5 @@
 ---
 permalink: /
-title: "Lauren Nunez"
 author_profile: true
 redirect_from: 
   - /about/
