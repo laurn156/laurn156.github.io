@@ -39,15 +39,13 @@
 ;
 
 /* theme toggle -> pill switch */
-#theme-toggle button {
+#theme-toggle > a {
   position: relative;
+  display: inline-block;
   width: 44px;
   height: 22px;
-  padding: 0;
   border: 1px solid currentColor;
   border-radius: 11px;
-  background: none;
-  color: inherit;
   cursor: pointer;
   vertical-align: middle;
 }
@@ -68,23 +66,24 @@
 }
 
 /* tooltip */
-#theme-toggle button::after {
+#theme-toggle > a::after {
   content: "Switch between light and dark mode";
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 8px);
   right: 0;
   padding: 0.35em 0.6em;
   border-radius: 4px;
   background: #333;
   color: #fff;
   font-size: 0.7rem;
+  font-weight: normal;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.15s ease;
 }
 
-#theme-toggle button:hover::after,
-#theme-toggle button:focus::after {
+#theme-toggle > a:hover::after,
+#theme-toggle > a:focus::after {
   opacity: 1;
 }
