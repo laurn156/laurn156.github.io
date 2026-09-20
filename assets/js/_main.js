@@ -30,23 +30,14 @@ function setTheme(theme) {
   const use_theme = theme ||
     localStorage.getItem("theme") ||
     $("html").attr("data-theme") ||
-    (browserPref ? "dark" : "light");
+    browserPref;
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
-
-    $("#theme-toggle")
-      .addClass("is-dark")
-      .attr("title", "Switch to light mode")
-      .attr("aria-label", "Switch to light mode");
-
-  } else {
+    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
+  } else if (use_theme === "light") {
     $("html").removeAttr("data-theme");
-
-    $("#theme-toggle")
-      .removeClass("is-dark")
-      .attr("title", "Switch to dark mode")
-      .attr("aria-label", "Switch to dark mode");
+    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
   }
 }
 
