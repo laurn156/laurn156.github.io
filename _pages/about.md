@@ -6,7 +6,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm Lauren, an undergraduate engineering student at Kennesaw State University
+Hi! I'm an undergraduate engineering student at Kennesaw State University
 studying robotics and machine learning, graduating in May 2027.
 
 My interests include humanoid robotics, robot learning, and autonomous systems.
