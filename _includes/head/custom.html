@@ -20,3 +20,54 @@
 <meta name="theme-color" content="var(--global-bg-color)"/>
 
 <!-- end custom head snippets -->
+
+
+<style>
+#theme-toggle > a {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+  border: 1px solid currentColor;
+  border-radius: 11px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#theme-toggle > a > #theme-icon {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  line-height: 1;
+  transition: left 0.2s ease, right 0.2s ease;
+}
+
+#theme-toggle > a > #theme-icon.fa-moon {
+  left: auto;
+  right: 4px;
+}
+
+#theme-toggle > a::after {
+  content: "Switch between light and dark mode";
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  padding: 0.35em 0.6em;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+#theme-toggle > a:hover::after,
+#theme-toggle > a:focus::after {
+  opacity: 1;
+}
+</style>
