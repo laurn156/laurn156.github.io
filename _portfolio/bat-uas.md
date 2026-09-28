@@ -1,7 +1,9 @@
 ---
 title: "Bat-Inspired UAS for Mapping and Navigation"
-excerpt: "Designed and prototyped custom components for a bat-inspired unmanned aerial system designed around an echolocation-based navigation and mapping concept. <br/><img src='/images/bat-uas-main.png'>"
+excerpt: "Designed and prototyped custom components for a bat-inspired unmanned aerial system designed around an echolocation-based navigation and mapping concept."
 collection: portfolio
+header:
+  teaser: bat-uas-main.png
 ---
 
 ## Overview
@@ -24,13 +26,26 @@ This project focused on the mechanical design and development of a bat-inspired 
 - **Custom Components:** 3D-printed housings and mounting components designed in SOLIDWORKS with consideration for weight, fit, and integration
 - **Design Validation:** FEA, weight analysis, clearance evaluation, and physical prototyping were used throughout the design process
 
-![Isometric CAD View](/images/bat-uas-iso.png)
+## Design Gallery
 
-![Bat Head Design](/images/bat-uas-head.png)
-
-![FEA Analysis](https://github.com/laurn156/laurn156.github.io/blob/master/images/bat-uas-fea.png?raw=true)
-
-![Weight Breakdown](/images/bat-uas-weight.png)
+<div class="project-gallery">
+  <figure>
+    <img src="/images/bat-uas-iso.png" alt="Isometric CAD view of the bat-inspired UAS" loading="lazy">
+    <figcaption>Isometric CAD View</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/bat-uas-head.png" alt="Detailed CAD view of the bat head attachment" loading="lazy">
+    <figcaption>Bat Head Design</figcaption>
+  </figure>
+  <figure>
+    <img src="https://github.com/laurn156/laurn156.github.io/blob/master/images/bat-uas-fea.png?raw=true" alt="Finite element analysis results for a custom UAS component" loading="lazy">
+    <figcaption>FEA Analysis</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/bat-uas-weight.png" alt="Weight breakdown for the bat-inspired UAS" loading="lazy">
+    <figcaption>Weight Breakdown</figcaption>
+  </figure>
+</div>
 
 ## Acknowledgments
 
