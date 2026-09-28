@@ -10,7 +10,7 @@ This project focused on the mechanical design and development of a bat-inspired 
 
 ![Real Life Model](/images/bat-uas-main.png)
 
-## What We Built
+## System Development
 
 - Designed custom 3D-printed components in SOLIDWORKS, including a bat head attachment, ESC housing, battery box, and mounting components
 - Performed FEA across multiple design iterations to evaluate structural performance and refine component geometry
