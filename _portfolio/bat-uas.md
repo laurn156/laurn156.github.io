@@ -2,6 +2,7 @@
 title: "Bat-Inspired UAS for Mapping and Navigation"
 excerpt: "Designed and prototyped custom components for a bat-inspired unmanned aerial system designed around an echolocation-based navigation and mapping concept."
 collection: portfolio
+author_profile: false
 header:
   teaser: bat-uas-main.png
 ---
@@ -10,7 +11,7 @@ header:
 
 This project focused on the mechanical design and development of a bat-inspired Unmanned Aerial System (UAS). Inspired by the echolocation capabilities of the Grey Long-Eared Bat, the platform incorporated custom components and provisions for a speaker and microphones to support future ultrasonic sensing, navigation, and mapping.
 
-![Real Life Model](/images/bat-uas-main.png)
+<img class="project-overview-image" src="/images/bat-uas-main.png" alt="Real-life bat-inspired UAS prototype">
 
 ## System Development
 
@@ -26,7 +27,7 @@ This project focused on the mechanical design and development of a bat-inspired 
 - **Custom Components:** 3D-printed housings and mounting components designed in SOLIDWORKS with consideration for weight, fit, and integration
 - **Design Validation:** FEA, weight analysis, clearance evaluation, and physical prototyping were used throughout the design process
 
-## Overview
+## Design Gallery
 
 <div class="project-gallery">
   <figure>
