@@ -37,3 +37,93 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
+/* Portfolio layout refinements */
+@media screen and (min-width: 64em) {
+  .masthead__inner-wrap,
+  #main {
+    max-width: 1600px;
+    padding-left: clamp(1.25rem, 3vw, 3rem);
+    padding-right: clamp(1.25rem, 3vw, 3rem);
+  }
+
+  .page {
+    padding-right: 0;
+  }
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.project-gallery figure {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(127, 127, 127, 0.22);
+  border-radius: 0.6rem;
+  background: rgba(127, 127, 127, 0.06);
+}
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin: 0;
+  object-fit: contain;
+}
+
+.project-gallery figcaption {
+  padding: 0.65rem 0.85rem;
+  border-top: 1px solid rgba(127, 127, 127, 0.18);
+  font-size: 0.85em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-grid .grid__item {
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+
+.project-grid .archive__item {
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(127, 127, 127, 0.22);
+  border-radius: 0.75rem;
+  background: rgba(127, 127, 127, 0.04);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.project-grid .archive__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.12);
+}
+
+.project-grid .archive__item-teaser img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.project-grid .archive__item-title {
+  margin-top: 0.8rem;
+}
+
+@media screen and (max-width: 44em) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+}
