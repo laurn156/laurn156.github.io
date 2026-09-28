@@ -26,9 +26,9 @@ This project focused on the mechanical design and development of a bat-inspired 
 
 ![Isometric CAD View](/images/bat-uas-iso.png)
 
-![Bat Head Design](/images/bat-uas-head.jpg)
+![Bat Head Design](/images/bat-uas-head.png)
 
-![FEA Analysis](/images/bat-uas-fea.png)
+![FEA Analysis](https://github.com/laurn156/laurn156.github.io/blob/master/images/bat-uas-fea.png?raw=true)
 
 ![Weight Breakdown](/images/bat-uas-weight.png)
 
