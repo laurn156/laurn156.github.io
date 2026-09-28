@@ -2,6 +2,9 @@
 title: "Projects"
 permalink: /projects/
 author_profile: true
+layout: archive
 ---
 
-Coming soon!
+{% for post in site.portfolio %}
+  {% include archive-single.html %}
+{% endfor %}
