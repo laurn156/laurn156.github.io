@@ -42,9 +42,9 @@
 @media screen and (min-width: 64em) {
   .masthead__inner-wrap,
   #main {
-    max-width: 1600px;
-    padding-left: clamp(1.25rem, 3vw, 3rem);
-    padding-right: clamp(1.25rem, 3vw, 3rem);
+    max-width: 2000px;
+    padding-left: clamp(1.25rem, 2vw, 2.5rem);
+    padding-right: clamp(1.25rem, 2vw, 2.5rem);
   }
 
   .page {
@@ -60,11 +60,16 @@
 }
 
 .project-gallery figure {
+  position: relative;
   overflow: hidden;
   margin: 0;
   border: 1px solid rgba(127, 127, 127, 0.22);
-  border-radius: 0.6rem;
+  border-radius: 0.75rem;
   background: rgba(127, 127, 127, 0.06);
+  transform: translateZ(0);
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 220ms ease,
+              border-color 220ms ease;
 }
 
 .project-gallery img {
@@ -73,6 +78,22 @@
   aspect-ratio: 16 / 10;
   margin: 0;
   object-fit: contain;
+  transition: transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 220ms ease;
+}
+
+@media (hover: hover) {
+  .project-gallery figure:hover {
+    z-index: 1;
+    border-color: rgba(70, 120, 210, 0.5);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
+    transform: translateY(-8px) scale(1.025);
+  }
+
+  .project-gallery figure:hover img {
+    filter: saturate(1.08);
+    transform: scale(1.025);
+  }
 }
 
 .project-gallery figcaption {
@@ -83,10 +104,21 @@
   text-align: center;
 }
 
+#main:has(.project-grid) .archive {
+  float: none;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
+  width: 100%;
+  max-width: 1500px;
   margin-top: 1.5rem;
 }
 
@@ -102,12 +134,12 @@
   border: 1px solid rgba(127, 127, 127, 0.22);
   border-radius: 0.75rem;
   background: rgba(127, 127, 127, 0.04);
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .project-grid .archive__item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.14);
 }
 
 .project-grid .archive__item-teaser img {
@@ -120,6 +152,20 @@
 
 .project-grid .archive__item-title {
   margin-top: 0.8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-gallery figure,
+  .project-gallery img,
+  .project-grid .archive__item {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 44em) {
