@@ -22,7 +22,7 @@ This project focused on the mechanical design and development of a bat-inspired 
 ## Design Highlights
 
 - **UAS Platform:** Quadcopter configuration built around a stacked carbon-fiber frame
-- **Bat Head:** Custom attachment designed to accommodate a forward-facing speaker and two omnidirectional microphones for future ultrasonic sensing
+- **Bat Head:** Custom attachment designed to accommodate a forward-facing speaker (Pro-Wave Electronics 400EP125-NBWN) and two omnidirectional microphones (Sonorous Objects SO.2) for ultrasonic sensing
 - **Custom Components:** 3D-printed housings and mounting components designed in SOLIDWORKS with consideration for weight, fit, and integration
 - **Design Validation:** FEA, weight analysis, clearance evaluation, and physical prototyping were used throughout the design process
 
