@@ -5,8 +5,6 @@ author_profile: false
 layout: archive
 ---
 
-Selected engineering work in robotics, autonomous systems, and mechanical design.
-
 <div class="project-grid">
 {% for post in site.portfolio %}
   {% include archive-single.html type="grid" %}
