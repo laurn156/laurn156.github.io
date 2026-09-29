@@ -328,3 +328,71 @@
   object-fit: cover;
   object-position: 50% 53%;
 }
+
+/* Fellowship feature and a restrained portrait accent. */
+.author__avatar img {
+  border: 2px solid #b49a5a;
+  padding: 5px;
+  box-shadow: 0 0 0 5px rgba(180, 154, 90, 0.10);
+}
+
+.involvement-feature {
+  max-width: 900px;
+  margin: 1.75rem auto 3rem;
+  overflow: hidden;
+  border: 1px solid rgba(127, 127, 127, 0.24);
+  border-top: 3px solid #b49a5a;
+  border-radius: 0.85rem;
+  background: rgba(127, 127, 127, 0.04);
+}
+.involvement-feature__header,
+.involvement-feature__project {
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+.involvement-feature__eyebrow {
+  margin: 0 0 0.85rem;
+  color: #b49a5a;
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.involvement-feature h2 {
+  margin: 0 0 0.85rem;
+  padding: 0;
+  border: 0;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+.involvement-feature__intro {
+  max-width: 660px;
+  margin: 0;
+  line-height: 1.65;
+}
+.involvement-feature__project {
+  border-top: 1px solid rgba(127, 127, 127, 0.22);
+  background: rgba(180, 154, 90, 0.05);
+}
+.involvement-feature h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.3rem;
+}
+.involvement-feature__project > p:not(.involvement-feature__eyebrow) {
+  max-width: 720px;
+  margin: 0;
+  line-height: 1.75;
+}
+.involvement-feature__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.involvement-feature__tags li {
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(180, 154, 90, 0.32);
+  border-radius: 0.35rem;
+  font-size: 0.72em;
+}
