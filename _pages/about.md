@@ -35,7 +35,6 @@ redirect_from:
           <path d="M47 20v-5M33 28v6M61 28v6M40 47h14l4 4H36zM43 35h8"></path>
           <circle cx="42" cy="28" r="1" fill="currentColor"></circle>
           <circle cx="52" cy="28" r="1" fill="currentColor"></circle>
-          <path d="M12 8h19a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-5l-4 4v-4"></path>
         </svg>
       </span>
       <h3>Human–Robot Interaction</h3>
