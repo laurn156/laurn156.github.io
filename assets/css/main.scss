@@ -310,3 +310,21 @@
     margin-top: 1.5rem;
   }
 }
+
+/* Tighter LEAP Hand framing preserves the photograph's proportions. */
+.project-overview-image--leap {
+  width: min(100%, 640px);
+  height: auto;
+  max-height: none;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 50% 53%;
+}
+
+.project-grid .archive__item-teaser img[src$="/hand-main.png"] {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: 50% 53%;
+}
