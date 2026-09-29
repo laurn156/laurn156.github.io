@@ -14,7 +14,7 @@ header:
 
 This project focuses on dexterous manipulation with the open-source LEAP Hand developed at Carnegie Mellon University. The hand was assembled and calibrated, and a sim-to-real policy was integrated and deployed onto the physical hardware to achieve in-hand cube rotation. Ongoing work aims to reproduce the cube reorientation task from the [MuJoCo Playground paper](https://arxiv.org/abs/2502.08844), using a four-camera OptiTrack setup for real-time pose tracking.
 
-<img class="project-overview-image" src="/images/hand-main.png" alt="LEAP Hand holding a red cube on the physical hardware">
+<img class="project-overview-image project-overview-image--leap" src="/images/hand-main.png" alt="LEAP Hand holding a red cube on the physical hardware">
 
 ## Implementation
 
@@ -25,7 +25,7 @@ This project focuses on dexterous manipulation with the open-source LEAP Hand de
 ## Current Work
 
 - Developing a four-camera OptiTrack setup to track the cube's pose during manipulation.
-- Working toward reorienting the cube to a generated target one face turn away, following the task presented in the [MuJoCo Playground paper](https://arxiv.org/abs/2502.08844).
+- Working toward reorienting the cube to a generated target one face turn away, following the task presented in the MuJoCo Playground paper.
 
 ## Project Gallery
 
