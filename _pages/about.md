@@ -29,10 +29,13 @@ redirect_from:
     <article class="interest-card">
       <span class="interest-card__icon" aria-hidden="true">
         <svg viewBox="0 0 64 64" focusable="false">
-          <circle cx="12" cy="14" r="4"></circle><path d="M12 18v16m-6 12 6-12 7 12M5 25h14"></path>
-          <rect x="43" y="45" width="14" height="6" rx="1"></rect>
-          <circle cx="46" cy="25" r="4"></circle><circle cx="32" cy="32" r="4"></circle>
-          <path d="M50 45V29l-4-4-11 7M28 32l-9-3"></path>
+          <path d="M8 51v-7c0-5 4-9 9-9h3c5 0 9 4 9 9v7z"></path>
+          <circle cx="18.5" cy="25" r="7"></circle>
+          <rect x="36" y="20" width="22" height="21" rx="5"></rect>
+          <path d="M47 20v-5M33 28v6M61 28v6M40 47h14l4 4H36zM43 35h8"></path>
+          <circle cx="42" cy="28" r="1" fill="currentColor"></circle>
+          <circle cx="52" cy="28" r="1" fill="currentColor"></circle>
+          <path d="M12 8h19a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-5l-4 4v-4"></path>
         </svg>
       </span>
       <h3>Human–Robot Interaction</h3>
