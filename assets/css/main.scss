@@ -43,6 +43,11 @@
   display: none !important;
 }
 
+.masthead__menu-item.selected a,
+.masthead__menu-item.selected a:hover {
+  border-bottom-color: var(--global-accent-color);
+}
+
 @media screen and (min-width: 64em) {
   .masthead__inner-wrap,
   #main {
@@ -87,9 +92,9 @@
   position: relative;
   overflow: hidden;
   margin: 0;
-  border: 1px solid rgba(127, 127, 127, 0.22);
+  border: 1px solid var(--global-border-color);
   border-radius: 0.75rem;
-  background: rgba(127, 127, 127, 0.06);
+  background: var(--global-surface-color);
   transform: translateZ(0);
   transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
               box-shadow 220ms ease,
@@ -109,7 +114,7 @@
 @media (hover: hover) {
   .project-gallery figure:hover {
     z-index: 1;
-    border-color: rgba(70, 120, 210, 0.5);
+    border-color: var(--global-border-hover-color);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
     transform: translateY(-8px) scale(1.025);
   }
@@ -122,12 +127,13 @@
 
 .project-gallery figcaption {
   padding: 0.65rem 0.85rem;
-  border-top: 1px solid rgba(127, 127, 127, 0.18);
+  border-top: 1px solid var(--global-border-color);
   font-size: 0.85em;
   font-weight: 600;
   text-align: center;
 }
 
+/* Projects page: responsive grid of bordered cards */
 #main:has(.project-grid) .page__title {
   display: none;
 }
@@ -143,10 +149,10 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
   width: 100%;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0.75rem auto 0;
 }
 
@@ -157,47 +163,128 @@
 }
 
 .project-grid .archive__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  padding: 0.9rem;
-  border: 1px solid rgba(127, 127, 127, 0.22);
-  border-radius: 0.75rem;
-  background: rgba(127, 127, 127, 0.04);
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.project-grid .archive__item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.14);
+  padding: 13px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 11px;
+  background: var(--global-surface-color);
+  transition: border-color 250ms ease;
 }
 
 .project-grid .archive__item-teaser {
   width: 100%;
   max-height: none;
-  aspect-ratio: 16 / 9;
-  background: rgba(127, 127, 127, 0.08);
+  aspect-ratio: 4 / 3;
+  border-radius: 7px;
+  background: var(--global-bg-color);
+  box-shadow: none;
 }
 
 .project-grid .archive__item-teaser img {
+  display: block;
   width: 100%;
   height: 100%;
   margin: 0;
-  border-radius: 0.5rem;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: 50% 50%;
+  transition: transform 300ms ease;
 }
 
 .project-grid .archive__item-title {
-  margin-top: 0.8rem;
+  margin: 14px 0 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.project-grid .archive__item-title a {
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+/* The title link covers the whole card so the card is one click target. */
+.project-grid .archive__item-title a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 11px;
+}
+
+/* A non-breaking space keeps the arrow on the same line as the last word. */
+.project-grid .archive__item-title a::after {
+  content: "\00a0\00a0\2192";
+  position: relative;
+  left: 0;
+  color: var(--global-accent-color);
+  font-weight: 400;
+  transition: left 250ms ease;
+}
+
+.project-grid .archive__item-excerpt {
+  display: block;
+  margin: 0;
+  color: var(--global-text-color-light);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.project-grid .archive__item:hover .archive__item-title {
+  text-decoration: none;
+}
+
+.project-grid .archive__item:focus-within {
+  border-color: var(--global-accent-color);
+}
+
+@media (hover: hover) {
+  .project-grid .archive__item:hover {
+    border-color: var(--global-border-hover-color);
+  }
+
+  .project-grid .archive__item:hover .archive__item-teaser img {
+    transform: scale(1.04);
+  }
+
+  .project-grid .archive__item:hover .archive__item-title a::after {
+    left: 4px;
+  }
+}
+
+/* Per-image framing keeps each subject visible in the 4:3 crop. */
+.project-grid .archive__item-teaser img[src$="/hand-main.png"] {
+  object-position: 50% 55%;
+}
+
+.project-grid .archive__item-teaser img[src$="/humanoid-main.jpg"] {
+  object-position: 50% 30%;
+}
+
+.project-grid .archive__item-teaser img[src$="/sensing-unit-main.jpg"] {
+  object-position: 50% 40%;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .project-gallery figure,
   .project-gallery img,
-  .project-grid .archive__item {
+  .project-grid .archive__item,
+  .project-grid .archive__item-teaser img,
+  .project-grid .archive__item-title a::after {
     transition: none;
   }
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 56.25em) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 37.5em) {
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -219,7 +306,7 @@
   display: inline-block;
   margin: 0 0 0.85rem;
   padding-bottom: 0.45rem;
-  border-bottom: 2px solid #b49a5a;
+  border-bottom: 2px solid var(--global-accent-color);
   font-size: clamp(1.65rem, 3vw, 2.35rem);
   font-weight: 600;
 }
@@ -235,12 +322,12 @@
   max-width: 900px;
   margin: 0 auto 2.5rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(127, 127, 127, 0.28);
+  border-top: 1px solid var(--global-border-color);
 }
 
 .research-interests > h2 {
   margin: 0 0 1.5rem;
-  color: #b49a5a;
+  color: var(--global-accent-color);
   font-size: 0.95rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -255,9 +342,9 @@
 .interest-card {
   min-width: 0;
   padding: 1.15rem 1rem;
-  border: 1px solid rgba(127, 127, 127, 0.2);
+  border: 1px solid var(--global-border-color);
   border-radius: 0.85rem;
-  background: rgba(127, 127, 127, 0.05);
+  background: var(--global-surface-color);
   text-align: center;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
@@ -270,8 +357,8 @@
   height: 3.75rem;
   margin-bottom: 0.75rem;
   border-radius: 50%;
-  background: rgba(180, 154, 90, 0.14);
-  color: #b49a5a;
+  background: var(--global-accent-soft-color);
+  color: var(--global-accent-color);
   font-size: 1.55rem;
 }
 
@@ -295,7 +382,7 @@
 
 @media (hover: hover) {
   .interest-card:hover {
-    border-color: rgba(180, 154, 90, 0.48);
+    border-color: var(--global-border-hover-color);
     box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
     transform: translateY(-4px);
   }
@@ -321,19 +408,11 @@
   object-position: 50% 53%;
 }
 
-.project-grid .archive__item-teaser img[src$="/hand-main.png"] {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-  object-fit: cover;
-  object-position: 50% 53%;
-}
-
 /* Fellowship feature and a restrained portrait accent. */
 .author__avatar img {
-  border: 2px solid #b49a5a;
+  border: 2px solid var(--global-accent-color);
   padding: 5px;
-  box-shadow: 0 0 0 5px rgba(180, 154, 90, 0.10);
+  box-shadow: 0 0 0 5px var(--global-accent-soft-color);
 }
 
 /* Involvement entries: a compact list that grows as items are added. */
@@ -346,10 +425,10 @@
 }
 .involvement-item {
   padding: 1rem 1.25rem;
-  border: 1px solid rgba(127, 127, 127, 0.22);
-  border-left: 3px solid #b49a5a;
+  border: 1px solid var(--global-border-color);
+  border-left: 3px solid var(--global-accent-color);
   border-radius: 0.75rem;
-  background: rgba(127, 127, 127, 0.04);
+  background: var(--global-surface-color);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 .involvement-item + .involvement-item {
@@ -357,8 +436,8 @@
 }
 @media (hover: hover) {
   .involvement-item:hover {
-    border-color: rgba(180, 154, 90, 0.48);
-    border-left-color: #b49a5a;
+    border-color: var(--global-border-hover-color);
+    border-left-color: var(--global-accent-color);
     box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.14);
     transform: translateY(-4px);
   }

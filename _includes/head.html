@@ -10,6 +10,10 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  // Dark is the default; apply a saved light preference before first paint.
+  try {
+    if (localStorage.getItem("theme") === "light") document.documentElement.removeAttribute("data-theme");
+  } catch (e) {}
 </script>
 
 <!-- For all browsers -->
