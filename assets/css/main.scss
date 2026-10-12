@@ -299,6 +299,136 @@
   }
 }
 
+/* Projects page introduction, aligned with the project grid */
+.projects-intro {
+  max-width: 1200px;
+  margin: 0.75rem auto 1.75rem;
+}
+
+.projects-intro__title {
+  margin: 0 0 0.4rem;
+  padding: 0;
+  border: 0;
+  color: var(--global-text-color);
+  font-size: clamp(1.6rem, 2.6vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.projects-intro__lede {
+  margin: 0;
+  color: var(--global-text-color-light);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.projects-intro + .project-grid {
+  margin-top: 0;
+}
+
+/* Previous / next project navigation at the bottom of project pages */
+.pagination.project-pager {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-top: 0;
+}
+
+.pagination.project-pager::after {
+  display: none;
+}
+
+.project-pager__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.1rem 1.25rem 0.4rem 0;
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.project-pager__link:hover,
+.project-pager__link:focus {
+  text-decoration: none;
+}
+
+.project-pager__link--next {
+  grid-column: 2;
+  padding-right: 0;
+  padding-left: 1.25rem;
+  text-align: right;
+}
+
+.project-pager__link--prev + .project-pager__link--next {
+  border-left: 1px solid var(--global-border-color);
+}
+
+.project-pager__label {
+  color: var(--global-text-color-light);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-pager__arrow {
+  display: inline-block;
+  transition: transform 250ms ease;
+}
+
+.project-pager__title {
+  color: var(--global-text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: color 200ms ease;
+}
+
+.project-pager__link:focus-visible {
+  outline: 2px solid var(--global-accent-color);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (hover: hover) {
+  .project-pager__link:hover .project-pager__title {
+    color: var(--global-accent-color);
+  }
+
+  .project-pager__link--prev:hover .project-pager__arrow {
+    transform: translateX(-3px);
+  }
+
+  .project-pager__link--next:hover .project-pager__arrow {
+    transform: translateX(3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-pager__arrow,
+  .project-pager__title {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .pagination.project-pager {
+    grid-template-columns: 1fr;
+  }
+
+  .project-pager__spacer {
+    display: none;
+  }
+
+  .project-pager__link--next {
+    grid-column: 1;
+  }
+
+  .project-pager__link--prev + .project-pager__link--next {
+    border-left: 0;
+    border-top: 1px solid var(--global-border-color);
+  }
+}
+
 /* Home-page introduction and research interests */
 .home-intro {
   max-width: 1050px;
