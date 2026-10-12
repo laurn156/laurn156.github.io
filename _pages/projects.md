@@ -6,7 +6,6 @@ layout: archive
 ---
 
 <header class="projects-intro">
-  <h1 class="projects-intro__title">Projects</h1>
   <p class="projects-intro__lede">A collection of my work in robotics projects and engineering work</p>
 </header>
 
