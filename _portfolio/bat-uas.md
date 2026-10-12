@@ -38,11 +38,11 @@ This project focused on the mechanical design and development of a bat-inspired 
     <img src="/images/bat-uas-head.png" alt="Detailed CAD view of the bat head attachment" loading="lazy">
     <figcaption>Bat Head Design</figcaption>
   </figure>
-  <figure class="project-gallery__fit">
+  <figure>
     <img src="/images/bat-uas-fea.png" alt="Finite element analysis results for a custom UAS component" loading="lazy">
     <figcaption>FEA Analysis</figcaption>
   </figure>
-  <figure class="project-gallery__fit">
+  <figure>
     <img src="/images/bat-uas-weight.png" alt="Weight breakdown for the bat-inspired UAS" loading="lazy">
     <figcaption>Weight Breakdown</figcaption>
   </figure>

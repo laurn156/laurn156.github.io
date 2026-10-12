@@ -39,7 +39,7 @@ This project focuses on dexterous manipulation with the open-source LEAP Hand de
     <figcaption>Cube Reorientation in Simulation</figcaption>
   </figure>
   <figure style="grid-column: 1 / -1;">
-    <video autoplay loop muted playsinline controls preload="metadata" aria-label="LEAP Hand in-hand cube rotation demonstration" style="display: block; width: 100%; max-height: 560px; object-fit: contain; background: #111;">
+    <video autoplay loop muted playsinline controls preload="metadata" aria-label="LEAP Hand in-hand cube rotation demonstration" style="display: block; width: 100%; max-height: 560px; object-fit: contain; border-radius: 7px; background: var(--global-bg-color);">
       <source src="/images/hand-cube-rotate.mp4" type="video/mp4">
       Your browser does not support embedded video. <a href="/images/hand-cube-rotate.mp4">Watch the cube rotation demonstration.</a>
     </video>

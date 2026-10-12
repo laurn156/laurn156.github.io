@@ -101,24 +101,16 @@
   transition: border-color 250ms ease, transform 250ms ease;
 }
 
+/* Whole images, centered in a uniform frame tinted with the page background. */
 .project-gallery img {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   margin: 0;
   border-radius: 7px;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-
-/* Diagrams and tables are shown whole on a white backdrop instead of cropped. */
-.project-gallery figure.project-gallery__fit img {
+  background: var(--global-bg-color);
   object-fit: contain;
-  background: #fff;
-}
-
-.project-gallery img[src$="/hand-assembled.png"] {
-  object-position: 50% 32%;
+  object-position: 50% 50%;
 }
 
 @media (hover: hover) {
