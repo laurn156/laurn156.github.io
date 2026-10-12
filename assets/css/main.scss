@@ -595,6 +595,8 @@ $cursor-arrow-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/200
 $cursor-hand-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 3.5a1.5 1.5 0 0 1 3 0V9a1.5 1.5 0 0 1 3 0v1a1.5 1.5 0 0 1 3 0v1a1.5 1.5 0 0 1 3 0v4c0 3.9-3.1 7-7 7h-1.5c-2.6 0-4.2-.9-5.6-2.3l-2.9-2.9a1.5 1.5 0 0 1 2.1-2.1L7 16z' fill='%23b4beff' stroke='%23334155' stroke-width='1.2' stroke-linejoin='round'/%3E%3Cpath d='M10 9v3.5M13 10v2.5M16 11v1.5' fill='none' stroke='%23334155' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E") 8 2, pointer;
 $cursor-arrow-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23b4beff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z'/%3E%3C/svg%3E") 4 4, auto;
 $cursor-hand-dark: $cursor-hand-light;
+/* I-beam: lavender stroke over a slate outline, matching the hand; hotspot at its center. */
+$cursor-text: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 4.5c1.6 0 3 .6 3 2v11c0 1.4 1.4 2 3 2M15 4.5c-1.6 0-3 .6-3 2v11c0 1.4-1.4 2-3 2M10 12h4' stroke='%23334155' stroke-width='3.4'/%3E%3Cpath d='M9 4.5c1.6 0 3 .6 3 2v11c0 1.4 1.4 2 3 2M15 4.5c-1.6 0-3 .6-3 2v11c0 1.4-1.4 2-3 2M10 12h4' stroke='%23b4beff' stroke-width='1.6'/%3E%3C/svg%3E") 12 12, text;
 
 @mixin site-cursors($arrow, $hand) {
   /* Arrow everywhere, including template elements that set cursor: default. */
@@ -630,6 +632,6 @@ $cursor-hand-dark: $cursor-hand-light;
   h1, h2, h3, h4, h5, h6,
   input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
   textarea {
-    cursor: text;
+    cursor: $cursor-text;
   }
 }
