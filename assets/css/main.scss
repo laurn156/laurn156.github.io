@@ -231,11 +231,8 @@
 /* A non-breaking space keeps the arrow on the same line as the last word. */
 .project-grid .archive__item-title a::after {
   content: "\00a0\00a0\2192";
-  position: relative;
-  left: 0;
   color: var(--global-accent-color);
   font-weight: 400;
-  transition: left 250ms ease;
 }
 
 .project-grid .archive__item-excerpt {
@@ -250,6 +247,10 @@
   text-decoration: none;
 }
 
+.project-grid .archive__item:hover .archive__item-teaser {
+  box-shadow: none;
+}
+
 /* Show focus only for keyboard users, so a clicked card isn't left highlighted after going back. */
 .project-grid .archive__item-title a:focus {
   outline: none;
@@ -257,12 +258,6 @@
 
 .project-grid .archive__item:has(.archive__item-title a:focus-visible) {
   border-color: var(--global-accent-color);
-}
-
-@media (hover: hover) {
-  .project-grid .archive__item:hover .archive__item-title a::after {
-    left: 4px;
-  }
 }
 
 /* Per-image framing keeps each subject visible in the 4:3 crop. */
@@ -281,8 +276,7 @@
 @media (prefers-reduced-motion: reduce) {
   .project-gallery figure,
   .project-gallery img,
-  .project-grid .archive__item,
-  .project-grid .archive__item-title a::after {
+  .project-grid .archive__item {
     transition: none;
   }
 }
