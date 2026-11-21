@@ -78,4 +78,4 @@ Designed a custom rail-based mounting attachment to secure the sensing units to 
 
 ## Acknowledgements
 
-This project is conducted under the guidance of Dr. Razvan Voicu and Dr. Md. Hazrat Ali at Kennesaw State University.
+This project is conducted under the guidance of Dr. Razvan Voicu at Kennesaw State University.
