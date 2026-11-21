@@ -185,7 +185,7 @@
   border: 1px solid var(--global-border-color);
   border-radius: 11px;
   background: var(--global-surface-color);
-  transition: border-color 250ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .project-grid .archive__item-teaser {
@@ -204,7 +204,6 @@
   margin: 0;
   object-fit: cover;
   object-position: 50% 50%;
-  transition: transform 300ms ease;
 }
 
 .project-grid .archive__item-title {
@@ -261,14 +260,6 @@
 }
 
 @media (hover: hover) {
-  .project-grid .archive__item:hover {
-    border-color: var(--global-border-hover-color);
-  }
-
-  .project-grid .archive__item:hover .archive__item-teaser img {
-    transform: scale(1.04);
-  }
-
   .project-grid .archive__item:hover .archive__item-title a::after {
     left: 4px;
   }
@@ -291,7 +282,6 @@
   .project-gallery figure,
   .project-gallery img,
   .project-grid .archive__item,
-  .project-grid .archive__item-teaser img,
   .project-grid .archive__item-title a::after {
     transition: none;
   }
@@ -520,7 +510,9 @@
 
 
 @media (hover: hover) {
-  .interest-card:hover {
+  .interest-card:hover,
+  .project-grid .archive__item:hover,
+  .moments-card:hover {
     border-color: var(--global-border-hover-color);
     box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
     transform: translateY(-4px);

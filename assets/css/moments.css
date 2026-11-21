@@ -20,15 +20,17 @@
 
 .moments-card {
   min-width: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
+  padding: 0.65rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 11px;
+  background: var(--global-surface-color);
   color: var(--global-text-color);
   font: inherit;
   font-size: 0.95rem;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .moments-card img {
@@ -42,9 +44,9 @@
   object-fit: contain;
 }
 
-@media (hover: hover) {
-  .moments-card:hover img {
-    border-color: var(--global-accent-color);
+@media (prefers-reduced-motion: reduce) {
+  .moments-card {
+    transition: none;
   }
 }
 
