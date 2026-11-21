@@ -1,0 +1,38 @@
+---
+title: "Moments"
+permalink: /moments/
+author_profile: false
+layout: archive
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/moments.css' | relative_url }}">
+<p class="moments-intro">Snapshots from conferences, hackathons, research events, and more.</p>
+
+<div class="moments-grid">
+  {% for moment in site.data.moments %}
+  <button class="moments-card" type="button" aria-haspopup="dialog">
+    <img src="{{ moment.image | relative_url | escape }}" alt="" loading="lazy">
+    <span>{{ moment.title | escape }}</span>
+  </button>
+  {% endfor %}
+</div>
+
+<dialog id="moments-lightbox" aria-label="Moment photo">
+  <div class="moments-lightbox__content">
+    <form method="dialog" class="moments-lightbox__toolbar">
+      <button type="submit" aria-label="Close" autofocus>&times;</button>
+    </form>
+    <figure>
+      <img alt="">
+      <figcaption aria-live="polite"></figcaption>
+    </figure>
+    {% if site.data.moments.size > 1 %}
+    <div class="moments-lightbox__controls">
+      <button type="button" data-step="-1" aria-label="Previous photo">&larr;</button>
+      <button type="button" data-step="1" aria-label="Next photo">&rarr;</button>
+    </div>
+    {% endif %}
+  </div>
+</dialog>
+
+<script src="{{ '/assets/js/moments.js' | relative_url }}" defer></script>
