@@ -119,6 +119,42 @@ html:has(#moments-lightbox[open]) {
   cursor: pointer;
 }
 
+#moments-lightbox .moments-lightbox__controls button {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--global-accent-soft-color);
+  color: var(--global-accent-color);
+  font-size: 0;
+}
+
+.moments-lightbox__controls button::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: translateX(-1px) rotate(45deg);
+}
+
+.moments-lightbox__controls button[data-step="-1"]::before {
+  transform: translateX(1px) rotate(-135deg);
+}
+
+@media (hover: hover) {
+  #moments-lightbox .moments-lightbox__controls button:hover {
+    border-color: var(--global-accent-color);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #moments-lightbox .moments-lightbox__controls button {
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+}
+
 #moments-lightbox figure {
   display: block;
   margin: 0 0 0.5rem;
