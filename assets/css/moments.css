@@ -1,0 +1,154 @@
+#main:has(.moments-grid) .archive {
+  float: none;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+.moments-intro {
+  margin: 0 0 1.5rem;
+  color: var(--global-text-color-light);
+}
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.moments-card {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--global-text-color);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.moments-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin: 0 0 0.55rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 7px;
+  background: var(--global-surface-color);
+  object-fit: contain;
+}
+
+@media (hover: hover) {
+  .moments-card:hover img {
+    border-color: var(--global-accent-color);
+  }
+}
+
+.moments-card:focus-visible,
+#moments-lightbox button:focus-visible {
+  outline: 2px solid var(--global-accent-color);
+  outline-offset: 3px;
+}
+
+#moments-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 1rem;
+  border: 0;
+  background: transparent;
+  color: var(--global-text-color);
+  overflow: auto;
+}
+
+#moments-lightbox[open] {
+  display: grid;
+  place-items: center;
+}
+
+#moments-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+html:has(#moments-lightbox[open]) {
+  overflow: hidden;
+}
+
+.moments-lightbox__content {
+  width: min(100%, 52rem);
+  padding: 0.75rem;
+  border-radius: 11px;
+  background: var(--global-surface-color);
+}
+
+.moments-lightbox__toolbar,
+.moments-lightbox__controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.moments-lightbox__toolbar {
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+#moments-lightbox button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid var(--global-border-color);
+  border-radius: 7px;
+  background: var(--global-bg-color);
+  color: inherit;
+  font: inherit;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+#moments-lightbox figure {
+  display: block;
+  margin: 0 0 0.5rem;
+}
+
+#moments-lightbox img {
+  display: block;
+  width: 100%;
+  height: min(60vh, 36rem);
+  height: min(60dvh, 36rem);
+  margin: 0;
+  border-radius: 7px;
+  background: var(--global-bg-color);
+  object-fit: contain;
+}
+
+#moments-lightbox figcaption {
+  margin: 0.5rem 0 0;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 56.25em) {
+  .moments-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 37.5em) {
+  .moments-grid {
+    grid-template-columns: 1fr;
+  }
+}
