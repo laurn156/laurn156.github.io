@@ -48,6 +48,17 @@
   border-bottom-color: var(--global-accent-color);
 }
 
+@media screen and (max-width: 37.5em) {
+  #site-nav .visible-links a {
+    margin-inline: 0.35rem;
+    font-size: 0.875rem;
+  }
+}
+
+#main:has(.moments-grid) > .archive > .page__title {
+  @extend .screen-reader-text;
+}
+
 @media screen and (min-width: 64em) {
   .masthead__inner-wrap,
   #main {
