@@ -27,10 +27,7 @@ redirect_from:
     <img src="{{ portrait | escape }}" alt="{{ site.author.name | escape }}" fetchpriority="high">
     <figcaption>
       <strong>{{ site.author.name }}</strong>
-      <span>{{ site.author.pronouns }}</span>
-      <ul class="home-profile__details">
-        <li><i class="fas fa-location-dot" aria-hidden="true"></i>{{ site.author.location }}</li>
-      </ul>
+      <span>{{ site.author.pronouns }} · <span class="home-profile__location"><i class="fas fa-location-dot" aria-hidden="true"></i> Marietta, GA</span></span>
     </figcaption>
   </figure>
 </section>
