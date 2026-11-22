@@ -482,6 +482,7 @@
   border-radius: 0.7rem;
   color: var(--global-text-color);
   text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
 .home-intro__links a:hover,
@@ -619,6 +620,11 @@ figure.home-profile {
     box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
     transform: translateY(-4px);
   }
+
+  .home-intro__links a:hover {
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+  }
 }
 
 @media screen and (max-width: 48em) {
@@ -641,6 +647,14 @@ figure.home-profile {
 @media (prefers-reduced-motion: reduce) {
   .interest-card {
     transition: none;
+  }
+
+  .home-intro__links a {
+    transition: none;
+  }
+
+  .home-intro__links a:hover {
+    transform: none;
   }
 }
 
