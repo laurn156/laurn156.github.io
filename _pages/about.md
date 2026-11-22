@@ -28,8 +28,11 @@ redirect_from:
     <figcaption>
       <strong>{{ site.author.name }}</strong>
       <span>{{ site.author.pronouns }}</span>
-      <span>{{ site.author.bio | escape }}</span>
-      <span>{{ site.author.location }} · {{ site.author.employer }}</span>
+      <ul class="home-profile__details">
+        <li><i class="fas fa-graduation-cap" aria-hidden="true"></i>{{ site.author.bio | escape }}</li>
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i>{{ site.author.location }}</li>
+        <li><i class="fas fa-building-columns" aria-hidden="true"></i>{{ site.author.employer }}</li>
+      </ul>
     </figcaption>
   </figure>
 </section>
