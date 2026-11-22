@@ -1,6 +1,6 @@
 ---
 title: "Humanoid AI Lab Assistant"
-excerpt: "This project focuses on developing an AI-powered laboratory assistant using the Unitree H2 humanoid robot. The goal is to enable the robot to assist with routine laboratory tasks, such as navigating between workstations, responding to voice commands, recording information, and interacting with laboratory equipment."
+excerpt: "Developing an AI-powered laboratory assistant on the Unitree H2 humanoid robot that combines natural language interaction with perception, navigation, and manipulation to support daily lab activities."
 collection: portfolio
 permalink: /portfolio/humanoid-ai-lab-assistant/
 author_profile: false
