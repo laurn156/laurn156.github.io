@@ -1,14 +1,37 @@
 ---
 permalink: /
-author_profile: true
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
 ---
 
-<section class="home-intro">
-  <p class="home-intro__eyebrow">Hi, I'm Lauren!</p>
-  <p class="home-intro__lede">I'm an undergraduate student at Kennesaw State University studying Mechatronics Engineering, graduating in May 2027.</p>
+<section class="home-intro" aria-labelledby="home-intro-title">
+  <div class="home-intro__copy">
+    <h1 id="home-intro-title" class="home-intro__eyebrow">Hi, I'm Lauren!</h1>
+    <p class="home-intro__lede">I'm an undergraduate student at Kennesaw State University studying Mechatronics Engineering, graduating in May 2027.</p>
+    <div class="home-intro__links">
+      {% if site.author.email %}
+      <a href="mailto:{{ site.author.email }}"><i class="fas fa-envelope" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a>
+      {% endif %}
+      {% if site.author.linkedin %}
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+      {% endif %}
+    </div>
+  </div>
+  <figure class="home-profile">
+    {% assign portrait = site.author.avatar %}
+    {% unless portrait contains "://" %}
+      {% assign portrait = portrait | prepend: "/images/" | relative_url %}
+    {% endunless %}
+    <img src="{{ portrait | escape }}" alt="{{ site.author.name | escape }}" fetchpriority="high">
+    <figcaption>
+      <strong>{{ site.author.name }}</strong>
+      <span>{{ site.author.pronouns }}</span>
+      <span>{{ site.author.bio | escape }}</span>
+      <span>{{ site.author.location }} · {{ site.author.employer }}</span>
+    </figcaption>
+  </figure>
 </section>
 
 <section class="research-interests" aria-labelledby="research-interests-title">
