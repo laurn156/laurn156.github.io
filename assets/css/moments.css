@@ -92,7 +92,7 @@ html:has(#moments-lightbox[open]) {
 }
 
 html:not([data-theme="dark"]) .moments-lightbox__content {
-  outline: 2px solid #8fae9b;
+  outline: 3.5px solid #8fae9b;
 }
 
 .moments-lightbox__toolbar,
