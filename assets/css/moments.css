@@ -91,6 +91,10 @@ html:has(#moments-lightbox[open]) {
   background: var(--global-surface-color);
 }
 
+html:not([data-theme="dark"]) .moments-lightbox__content {
+  outline: 1.5px solid #8fae9b;
+}
+
 .moments-lightbox__toolbar,
 .moments-lightbox__controls {
   display: flex;
