@@ -4,14 +4,14 @@ excerpt: "Designed and prototyped custom components for a bat-inspired unmanned 
 collection: portfolio
 author_profile: false
 header:
-  teaser: bat-uas-main.png
+  teaser: bat-uas-prototype.png
 ---
 
 ## Overview
 
 This project focused on the mechanical design and development of a bat-inspired Unmanned Aerial System (UAS). Inspired by the echolocation capabilities of the Grey Long-Eared Bat, the platform incorporated custom components and provisions for a speaker and microphones to support future ultrasonic sensing, navigation, and mapping.
 
-<img class="project-overview-image" src="/images/bat-uas-main.png" alt="Real-life bat-inspired UAS prototype">
+<img class="project-overview-image" src="/images/bat-uas-prototype.png" alt="Real-life bat-inspired UAS prototype">
 
 ## System Development
 
