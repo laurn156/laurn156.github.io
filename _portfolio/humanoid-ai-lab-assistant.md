@@ -8,7 +8,7 @@ header:
   teaser: humanoid-main.jpg
 ---
 
-*Work in Progress*
+*Work in Progress — This page will be updated as development continues.*
 
 This project focuses on developing an AI-powered laboratory assistant using the Unitree H2 humanoid robot. The goal is to enable the robot to assist with routine laboratory tasks, such as navigating between workstations, responding to voice commands, recording information, and interacting with laboratory equipment.
 
