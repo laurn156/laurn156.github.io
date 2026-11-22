@@ -148,6 +148,20 @@
 }
 
 /* Projects page: responsive grid of bordered cards */
+body:has(.project-grid) {
+  // Sticky navigation takes up space in the page, so the fixed-header offset is redundant.
+  padding-top: 0 !important;
+}
+
+body:has(.project-grid) > .masthead {
+  position: sticky;
+  animation: none;
+}
+
+#main:has(.project-grid) {
+  animation: none;
+}
+
 #main:has(.project-grid) .page__title {
   display: none;
 }
