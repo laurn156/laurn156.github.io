@@ -58,10 +58,6 @@
     width: 32px;
     min-width: 32px;
   }
-
-  .home-intro > .home-profile {
-    grid-row: 1;
-  }
 }
 
 #main:has(.moments-grid) > .archive > .page__title {
@@ -658,6 +654,10 @@ html:not([data-theme="dark"]) .project-grid .archive__item:has(.archive__item-ti
   .home-intro,
   .interest-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-intro > .home-profile {
+    grid-row: 1;
   }
 
   figure.home-profile {
