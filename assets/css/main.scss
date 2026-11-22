@@ -528,6 +528,25 @@ figure.home-profile {
   border-radius: 50%;
   box-shadow: 0 0 0 5px var(--global-accent-soft-color);
   object-fit: cover;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+@media (hover: hover) {
+  .home-profile img:hover {
+    box-shadow: 0 0 0 5px var(--global-accent-soft-color), 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .home-profile img:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-profile img {
+    transition: none;
+  }
 }
 
 .home-profile figcaption {
