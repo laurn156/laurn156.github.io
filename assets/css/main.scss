@@ -149,12 +149,12 @@
 
 /* Projects page: responsive grid of bordered cards */
 body:has(.project-grid) {
-  // Sticky navigation takes up space in the page, so the fixed-header offset is redundant.
+  // The Projects header occupies space in the document flow.
   padding-top: 0 !important;
 }
 
 body:has(.project-grid) > .masthead {
-  position: sticky;
+  position: relative;
   animation: none;
 }
 
