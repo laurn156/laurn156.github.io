@@ -630,6 +630,7 @@ figure.home-profile {
 html:not([data-theme="dark"]) .project-grid .archive__item,
 html:not([data-theme="dark"]) .moments-card {
   border-color: #8fae9b;
+  border-width: 1.5px;
 }
 
 html:not([data-theme="dark"]) .project-grid .archive__item:has(.archive__item-title a:focus-visible) {
@@ -640,6 +641,7 @@ html:not([data-theme="dark"]) .project-grid .archive__item:has(.archive__item-ti
   html:not([data-theme="dark"]) .project-grid .archive__item:hover,
   html:not([data-theme="dark"]) .moments-card:hover {
     border-color: var(--global-accent-color);
+    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.06);
   }
 }
 
