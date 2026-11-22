@@ -650,7 +650,8 @@ html:not([data-theme="dark"]) .project-grid .archive__item:has(.archive__item-ti
   }
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 48em),
+       screen and (max-width: 64em) and (orientation: portrait) {
   .home-intro,
   .interest-grid {
     grid-template-columns: 1fr;
