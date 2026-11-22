@@ -425,14 +425,7 @@
 }
 
 #main > .page:has(.home-intro) {
-  --global-accent-color: #246c5c;
-  --global-accent-soft-color: rgba(36, 108, 92, 0.12);
   max-width: 1240px;
-}
-
-html[data-theme="dark"] #main > .page:has(.home-intro) {
-  --global-accent-color: #a0e4ce;
-  --global-accent-soft-color: rgba(160, 228, 206, 0.13);
 }
 
 #main:has(.home-intro) .page__title {
