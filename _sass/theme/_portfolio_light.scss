@@ -1,15 +1,16 @@
 /* ==========================================================================
-   PORTFOLIO THEME - LIGHT VERSION (soft warm off-white)
+   PORTFOLIO THEME - LIGHT VERSION (soft sage)
    ========================================================================== */
 /* Color codes used for the theme */
-$background                 : #f8f7f4;
-$surface                    : #ffffff;
-$border                     : #e5e3de;
-$border-hover               : #cdcac3;
-$text                       : #20252b;
-$text-muted                 : #626a73;
-$accent                     : #625db5;
-$accent-hover               : #4b4699;
+$background                 : #f5f7f3;
+$background-secondary       : #eaf0ea;
+$surface                    : #fcfdfb;
+$border                     : #c8d6cd;
+$border-hover               : #829f8e;
+$text                       : #25352d;
+$text-muted                 : #52665a;
+$accent                     : #2d6651;
+$accent-hover               : #23513f;
 
 /* Color codes used for the site */
 $danger-color               : #d35c5c;
@@ -33,7 +34,7 @@ $sidebar-screen-min-width   : 1024px;
   --global-base-color                 : #{$accent};
   --global-bg-color                   : #{$background};
   --global-surface-color              : #{$surface};
-  --global-footer-bg-color            : #{$background};
+  --global-footer-bg-color            : #{$background-secondary};
   --global-border-color               : #{$border};
   --global-border-hover-color         : #{$border-hover};
   --global-dark-border-color          : #{$border};

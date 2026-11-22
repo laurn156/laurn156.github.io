@@ -1,15 +1,16 @@
 /* ==========================================================================
-   PORTFOLIO THEME - DARK VERSION (cool navy charcoal)
+   PORTFOLIO THEME - DARK VERSION (earthy green)
    ========================================================================== */
 /* Color codes used for the theme */
-$background                 : #11161d;
-$surface                    : #161d26;
-$border                     : #303a46;
-$border-hover               : #46525f;
-$text                       : #f5f7fa;
-$text-muted                 : #aebaca;
-$accent                     : #a5a0ff;
-$accent-hover               : #c4c1ff;
+$background                 : #151f1b;
+$background-secondary       : #1d2b25;
+$surface                    : #24352d;
+$border                     : #40564a;
+$border-hover               : #78b59a;
+$text                       : #f5f5f2;
+$text-muted                 : #b4bdb8;
+$accent                     : #a5dcc4;
+$accent-hover               : #78b59a;
 
 /* Color codes used for the site */
 $danger-color               : #d35c5c;
@@ -33,7 +34,7 @@ html[data-theme="dark"] {
   --global-base-color                 : #{$accent};
   --global-bg-color                   : #{$background};
   --global-surface-color              : #{$surface};
-  --global-footer-bg-color            : #{$background};
+  --global-footer-bg-color            : #{$background-secondary};
   --global-border-color               : #{$border};
   --global-border-hover-color         : #{$border-hover};
   --global-dark-border-color          : #{$border};
