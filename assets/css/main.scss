@@ -627,6 +627,22 @@ figure.home-profile {
   }
 }
 
+html:not([data-theme="dark"]) .project-grid .archive__item,
+html:not([data-theme="dark"]) .moments-card {
+  border-color: #8fae9b;
+}
+
+html:not([data-theme="dark"]) .project-grid .archive__item:has(.archive__item-title a:focus-visible) {
+  border-color: var(--global-accent-color);
+}
+
+@media (hover: hover) {
+  html:not([data-theme="dark"]) .project-grid .archive__item:hover,
+  html:not([data-theme="dark"]) .moments-card:hover {
+    border-color: var(--global-accent-color);
+  }
+}
+
 @media screen and (max-width: 48em) {
   .home-intro,
   .interest-grid {
