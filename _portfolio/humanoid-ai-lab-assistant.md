@@ -1,6 +1,6 @@
 ---
 title: "Humanoid AI Lab Assistant"
-excerpt: "Developing an AI-powered laboratory assistant on the Unitree H2 humanoid robot that combines information management with perception, navigation, and manipulation to support daily lab activities."
+excerpt: "This project focuses on developing an AI-powered laboratory assistant using the Unitree H2 humanoid robot. The goal is to enable the robot to assist with routine laboratory tasks, such as navigating between workstations, responding to voice commands, recording information, and interacting with laboratory equipment."
 collection: portfolio
 permalink: /portfolio/humanoid-ai-lab-assistant/
 author_profile: false
@@ -10,17 +10,22 @@ header:
 
 *Work in Progress*
 
-## Overview
-
-This project focuses on developing an AI-powered laboratory assistant using the Unitree H2 humanoid robot. The system aims to integrate an intelligent software assistant with the robot's perception, navigation, and manipulation capabilities to support daily laboratory activities. Planned functionality includes recording notes, managing documents, interpreting user requests, and issuing commands to the robot to perform physical tasks within the laboratory.
+This project focuses on developing an AI-powered laboratory assistant using the Unitree H2 humanoid robot. The goal is to enable the robot to assist with routine laboratory tasks, such as navigating between workstations, responding to voice commands, recording information, and interacting with laboratory equipment.
 
 <img class="project-overview-image" src="/images/humanoid-main.jpg" alt="Unitree H2 humanoid robot supported by a gantry stand in the lab">
 
-## Current Development
+## System Development
 
-Communication with the Unitree H2 has been established, with current efforts focused on accessing its onboard cameras and sensors. In parallel, an AI-based laboratory assistant is being developed to support information management, user interaction, and robot command execution. Future development will focus on integrating these components into a unified system capable of coordinating digital and physical tasks.
+- **Perception & Navigation:** Developing methods for the robot to recognize its surroundings, localize itself, and navigate between laboratory workstations.
+- **Voice Interaction:** Integrating a large language model (LLM) to interpret spoken commands and support natural language interaction with the robot.
+- **Manipulation:** Developing arm and hand control methods for grasping and interacting with laboratory objects and equipment.
+- **Onboard AI Assistant:** Developing a separate computing system capable of operating independently of the robot, with planned features such as setting timers, recording and summarizing notes, managing reminders, and answering questions.
 
-*This project is ongoing. Additional technical details, demonstrations, and results will be added as development progresses.*
+## Mechanical Design
+
+Designed a custom electronics backpack for the Unitree H2 to house an NVIDIA Jetson Nano and supporting power and electrical components. The enclosure is being developed with consideration for ventilation, cable routing, component placement, and access to connections.
+
+A separate protective cover is also being designed for the cables near the robot's neck.
 
 ## Project Gallery
 
