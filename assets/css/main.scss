@@ -50,13 +50,17 @@
 
 @media screen and (max-width: 37.5em) {
   #site-nav .visible-links a {
-    margin-inline: 0.15rem;
+    margin-inline: clamp(0.15rem, calc(7vw - 20px), 0.5rem);
     font-size: 0.875rem;
   }
 
   #site-nav .visible-links #theme-toggle a {
     width: 32px;
     min-width: 32px;
+  }
+
+  .home-intro > .home-profile {
+    grid-row: 1;
   }
 }
 
