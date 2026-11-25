@@ -1,5 +1,5 @@
 # Upload photos to images/moments/ and add an image path and title for each.
-- image: /images/moments/placeholder.svg
+- image: /images/moments/ksu-ai-hackathon.jpg
   title: KSU AI Hackathon
 - image: /images/moments/swe26.jpg
   title: WE26 Conference
